@@ -82,8 +82,11 @@ const LandingPage = () => {
     </div>
      
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
-      {jobs.map((job) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4 relative">
+      {jobs.length === 0 ?(
+        <p className="text-center text-gray-500 mt-8 font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Does not match anything!!!</p>
+      ):(
+        jobs.map((job) => (
         <div key={job.id} className="p-4 border rounded-md shadow">
           <div className="flex gap-3">
           <h2 className="text-xl font-bold">{job.title}</h2>
@@ -93,7 +96,8 @@ const LandingPage = () => {
           <p className="text-xs">{job.company} - {job.location}</p>
           <p className="text-sm text-gray-500">{job.type}</p>
         </div>
-      ))}
+      ))
+      )}
     </div>
     </>
     
