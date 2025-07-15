@@ -1,0 +1,172 @@
+{
+  "jobs": [
+    {
+      "id": "job-1",
+      "title": "Frontend Engineer",
+      "company": "TechnoNext",
+      "location": "Dhaka, Bangladesh",
+      "category": "Tech",
+      "type": "Full-time",
+      "featured": true,
+      "description": "Build and optimize scalable frontends using React and Next.js.",
+      "requirements": ["4+ years experience", "Next.js", "Tailwind CSS"],
+      "companyInfo": "TechnoNext is a leading software company focused on AI tools."
+    },
+    {
+      "id": "job-2",
+      "title": "UI/UX Designer",
+      "company": "CreativeBay",
+      "location": "Remote",
+      "category": "Design",
+      "type": "Contract",
+      "featured": false,
+      "description": "Design modern, responsive interfaces for web applications.",
+      "requirements": ["Figma", "Adobe XD", "Prototyping"],
+      "companyInfo": "CreativeBay is a global design studio serving startups and enterprises."
+    }, 
+  {
+    "id": "job-3",
+    "title": "Backend Developer",
+    "company": "CodeCore",
+    "location": "Bera, Pabna",
+    "category": "Tech",
+    "type": "Full-time",
+    "featured": false,
+    "description": "Develop robust APIs and backend systems using Node.js and Express.",
+    "requirements": ["Node.js", "MongoDB", "REST APIs"],
+    "companyInfo": "CodeCore builds scalable backend systems for e-commerce businesses."
+  },
+  {
+    "id": "job-4",
+    "title": "Product Manager",
+    "company": "Visionary Labs",
+    "location": "Remote",
+    "category": "Management",
+    "type": "Full-time",
+    "featured": true,
+    "description": "Lead product strategy and manage cross-functional teams.",
+    "requirements": ["3+ years experience", "Agile", "JIRA", "Communication"],
+    "companyInfo": "Visionary Labs helps startups scale with smart product strategies."
+  },
+  {
+    "id": "job-5",
+    "title": "Mobile App Developer",
+    "company": "Appify",
+    "location": "Khulna, Bangladesh",
+    "category": "Tech",
+    "type": "Part-time",
+    "featured": false,
+    "description": "Build performant Android and iOS apps using Flutter.",
+    "requirements": ["Flutter", "Dart", "Firebase"],
+    "companyInfo": "Appify specializes in mobile app development for fintech startups."
+  },
+  {
+    "id": "job-6",
+    "title": "Digital Marketing Specialist",
+    "company": "MarketBoost",
+    "location": "Dhaka, Bangladesh",
+    "category": "Marketing",
+    "type": "Full-time",
+    "featured": true,
+    "description": "Drive SEO, SEM, and social media campaigns to increase visibility.",
+    "requirements": ["Google Ads", "SEO", "Analytics"],
+    "companyInfo": "MarketBoost empowers businesses with performance-driven marketing."
+  },
+  {
+    "id": "job-7",
+    "title": "Data Analyst",
+    "company": "InsightOps",
+    "location": "Remote",
+    "category": "Data",
+    "type": "Contract",
+    "featured": false,
+    "description": "Analyze data and generate insights using Python and SQL.",
+    "requirements": ["SQL", "Python", "Power BI"],
+    "companyInfo": "InsightOps delivers data-driven solutions for decision-making."
+  },
+  {
+    "id": "job-8",
+    "title": "DevOps Engineer",
+    "company": "CloudScalers",
+    "location": "Sujanagar, Pabna",
+    "category": "Tech",
+    "type": "Full-time",
+    "featured": true,
+    "description": "Automate CI/CD pipelines and manage cloud infrastructure.",
+    "requirements": ["AWS", "Docker", "Kubernetes", "CI/CD"],
+    "companyInfo": "CloudScalers offers cloud infrastructure automation at scale."
+  },
+  {
+    "id": "job-9",
+    "title": "Content Writer",
+    "company": "WriteWell",
+    "location": "Remote",
+    "category": "Writing",
+    "type": "Part-time",
+    "featured": false,
+    "description": "Craft engaging blog posts, articles, and web copy.",
+    "requirements": ["SEO Writing", "Research", "Editing"],
+    "companyInfo": "WriteWell provides content creation services for tech brands."
+  },
+  {
+    "id": "job-10",
+    "title": "Graphic Designer",
+    "company": "PixelNest",
+    "location": "Chittagong, Bangladesh",
+    "category": "Design",
+    "type": "Freelance",
+    "featured": true,
+    "description": "Create marketing visuals, logos, and branding material.",
+    "requirements": ["Photoshop", "Illustrator", "Creativity"],
+    "companyInfo": "PixelNest is a boutique design agency with global clients."
+  },
+  {
+    "id": "job-11",
+    "title": "Customer Support Specialist",
+    "company": "HelpHub",
+    "location": "Remote",
+    "category": "Support",
+    "type": "Full-time",
+    "featured": false,
+    "description": "Assist users via chat, email, and phone with excellent service.",
+    "requirements": ["Customer service", "Communication", "CRM tools"],
+    "companyInfo": "HelpHub offers 24/7 support solutions to SaaS companies."
+  },
+  {
+    "id": "job-12",
+    "title": "QA Engineer",
+    "company": "TestTrack",
+    "location": "Dhaka, Bangladesh",
+    "category": "Tech",
+    "type": "Full-time",
+    "featured": false,
+    "description": "Perform manual and automated testing for web platforms.",
+    "requirements": ["Selenium", "Test cases", "Bug reporting"],
+    "companyInfo": "TestTrack ensures quality and performance in every software release."
+  }
+  ],
+  "users": [
+    {
+      "id": "user-1",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "categories": [
+  [
+    { "id": 1, "name": "Software Development" },
+    { "id": 2, "name": "Marketing" },
+    { "id": 3, "name": "Design" },
+    { "id": 4, "name": "Business & Strategy" },
+    { "id": 5, "name": "Sales" },
+    { "id": 6, "name": "Customer Support" },
+    { "id": 7, "name": "Product Management" },
+    { "id": 8, "name": "Data & Analytics" },
+    { "id": 9, "name": "Finance" },
+    { "id": 10, "name": "HR & Recruiting" },
+    { "id": 11, "name": "Education" },
+    { "id": 12, "name": "Tech" }
+  ]
+]
+}
