@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -54,9 +55,7 @@ const LandingPage = () => {
   };
   return (
     <>
-    <div className="flex items-center justify-between p-4">
-      <h1 className='font-bold text-xl cursor-pointer' onClick={resetFilters}>Job Search Portal</h1>
-    <div className="mb-2 flex items-center justify-end gap-2.5">
+    <div className="mb-2 flex items-center justify-end gap-2.5 p-4">
         <select value={filters.type} onChange={e => setFilters(f => ({ ...f, type: e.target.value }))}>
           <option value="">All Types</option>
           <option value="Full-time">Full-time</option>
@@ -78,8 +77,9 @@ const LandingPage = () => {
           onChange={e => setFilters(f => ({ ...f, location: e.target.value }))}
           className="border px-2 ml-2"
         />
+
+        <button onClick={resetFilters} className='cursor-pointer'>Clear All</button>
       </div>
-    </div>
      
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4 relative">
@@ -87,15 +87,18 @@ const LandingPage = () => {
         <p className="text-center text-gray-500 mt-8 font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Does not match anything!!!</p>
       ):(
         jobs.map((job) => (
-        <div key={job.id} className="p-4 border rounded-md shadow">
-          <div className="flex gap-3">
-          <h2 className="text-xl font-bold">{job.title}</h2>
-          <h4 className='text-xs italic border rounded-3xl max-w-fit p-1'>{job.category}</h4>
-          </div>
-          <h5>{job.description}</h5>
-          <p className="text-xs">{job.company} - {job.location}</p>
-          <p className="text-sm text-gray-500">{job.type}</p>
-        </div>
+          <Link href={`/jobs/${job?.id}`} key={job?.id}>
+            <div className="p-4 border rounded-md shadow hover:scale-95 transition hover:bg-gray-600 hover:text-white">
+              <div className="flex gap-3">
+              <h2 className="text-xl font-bold">{job.title}</h2>
+              <h4 className='text-xs italic border rounded-3xl max-w-fit p-1'>{job.category}</h4>
+              </div>
+              <h5>{job.description}</h5>
+              <p className="text-xs">{job.company} - {job.location}</p>
+              <p className="text-sm text-gray-500 hover:text-white">{job.type}</p>
+            </div>
+          </Link>
+        
       ))
       )}
     </div>
