@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Hero from './hero/heroSection';
 
 const LandingPage = () => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const LandingPage = () => {
     category: searchParams.get('category') || '',
     location: searchParams.get('location') || ''
   });
+  const search = searchParams.get('search') || '';
 
 // Update URL when filters change
 
@@ -22,6 +24,7 @@ const LandingPage = () => {
   if (filters.type) params.set('type', filters.type);
   if (filters.category) params.set('category', filters.category);
   if (filters.location) params.set('location', filters.location);
+  if (search) params.set('search', search);
 
   router.push(`/?${params.toString()}`);
 }, [filters]);
@@ -35,6 +38,7 @@ const LandingPage = () => {
       if (filters.type) params.set('type', filters.type);
       if (filters.category) params.set('category', filters.category);
       if (filters.location) params.set('location', filters.location);
+      if (search) params.set('search', search);
 
       const res = await fetch(`/api/jobs?${params.toString()}`);
       const data = await res.json();
@@ -42,7 +46,7 @@ const LandingPage = () => {
     };
 
     fetchJobs();
-  }, [filters]);
+  }, [filters,search]);
   const resetFilters = () => {
     setFilters({
       type: '',
@@ -55,7 +59,8 @@ const LandingPage = () => {
   };
   return (
     <>
-    <div className="mb-2 flex items-center justify-end gap-2.5 p-4">
+    <Hero/>
+    <div className="mb-2 flex flex-col md:flex-row items-center justify-end gap-4 p-4">
         <select value={filters.type} onChange={e => setFilters(f => ({ ...f, type: e.target.value }))}>
           <option value="">All Types</option>
           <option value="Full-time">Full-time</option>
@@ -90,7 +95,7 @@ const LandingPage = () => {
           <Link href={`/jobs/${job?.id}`} key={job?.id}>
             <div className="p-4 border rounded-md shadow hover:scale-95 transition hover:bg-gray-600 hover:text-white">
               <div className="flex gap-3">
-              <h2 className="text-xl font-bold">{job.title}</h2>
+              <h2 className="text-base lg:text-xl font-bold">{job.title}</h2>
               <h4 className='text-xs italic border rounded-3xl max-w-fit p-1'>{job.category}</h4>
               </div>
               <h5>{job.description}</h5>

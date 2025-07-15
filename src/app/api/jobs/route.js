@@ -5,6 +5,7 @@ export async function GET(req) {
   const type = searchParams.get('type');
   const category = searchParams.get('category');
   const location = searchParams.get('location');
+  const search = searchParams.get('search');
 
   const res = await fetch('http://localhost:4000/jobs');
   let jobs = await res.json();
@@ -29,7 +30,14 @@ export async function GET(req) {
       job.location.toLowerCase().includes(location.toLowerCase())
     );
   }
-
+  if (search) {
+    const term = search.toLowerCase();
+    jobs = jobs.filter((job) =>
+      job.title.toLowerCase().includes(term) ||
+      job.company.toLowerCase().includes(term) ||
+      job.location.toLowerCase().includes(term)
+    );
+  }
   return Response.json(jobs);
 }
 
