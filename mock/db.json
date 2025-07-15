@@ -219,30 +219,6 @@
       "companyInfo": "Brain Station 23 is hiring via Post Job Form."
     },
     {
-      "id": "job-401",
-      "title": "Google Add Specialist",
-      "description": "To generate more lead",
-      "requirement": "Google Add Certification",
-      "location": "Shah Kabir Majar Road, Dhaka",
-      "category": "Marketing",
-      "type": "Part-time",
-      "company": "Suffrah IT",
-      "requirements": "Google Add Certification",
-      "companyInfo": "Suffrah IT is hiring via Post Job Form."
-    },
-    {
-      "id": "job-101",
-      "title": "UI Desiner",
-      "description": "Have to create lucrative user interface",
-      "requirements": "Adobe Photoshop expert",
-      "location": "Uttara, Dhaka",
-      "category": "Design",
-      "type": "Full-time",
-      "company": "Buggers Studio",
-      "requirement": "3+ years",
-      "companyInfo": "Buggers Studio is hiring via Post Job Form."
-    },
-    {
       "id": "job-579",
       "title": "UX Designer",
       "description": "Responsible for user experience",
@@ -254,6 +230,30 @@
         "Adobe Photoshop, Figma"
       ],
       "companyInfo": "Debuggers Studio is hiring via Post Job Form."
+    },
+    {
+      "id": "job-845",
+      "title": "Test Job",
+      "description": "Test Description",
+      "location": "Barishal, Bangladesh",
+      "category": "Design",
+      "type": "Contract",
+      "company": "Test Technology",
+      "requirements": [],
+      "companyInfo": "Test Technology is hiring via Post Job Form."
+    },
+    {
+      "id": "job-486",
+      "title": "Test 2",
+      "description": "Test 2",
+      "location": "Uttara, Dhaka",
+      "category": "Design",
+      "type": "Contract",
+      "company": "Test Technology 2",
+      "requirements": [
+        "test 2, test 3"
+      ],
+      "companyInfo": "Test Technology 2 is hiring via Post Job Form."
     }
   ],
   "users": [

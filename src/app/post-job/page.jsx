@@ -48,7 +48,7 @@ export default function PostJobPage() {
     });
 
     if (res.ok) {
-      router.push('/jobs'); // ✅ Redirect to job list
+      router.push('/jobs'); // Redirect to job list
     } else {
       setError('Something went wrong while posting the job.');
     }
