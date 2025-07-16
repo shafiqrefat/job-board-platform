@@ -2,7 +2,7 @@ import { JobTabs } from '../../components/jobTabs/jobTabs';
 import { notFound } from 'next/navigation';
 
 async function getJob(id) {
-  const res = await fetch(`http://localhost:4000/jobs/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/jobs/${id}`);
   if (!res.ok) return null;
   return res.json();
 }

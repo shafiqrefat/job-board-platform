@@ -33,7 +33,7 @@ export default function SignupPage() {
     }
 
     // Check if user already exists
-    const checkRes = await fetch(`http://localhost:4000/users?email=${email}`);
+    const checkRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users?email=${email}`);
     const existing = await checkRes.json();
 
     if (existing.length > 0) {
@@ -49,7 +49,7 @@ export default function SignupPage() {
       password
     };
 
-    const res = await fetch('http://localhost:4000/users', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUser)

@@ -43,7 +43,7 @@ export default function PostJobPage() {
       companyInfo: `${formData.company} is hiring via Post Job Form.`
     };
 
-    const res = await fetch('http://localhost:4000/jobs', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/jobs`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newJob)

@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch(`http://localhost:4000/users?email=${email}&password=${password}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users?email=${email}&password=${password}`);
     const data = await res.json();
 
     if (data.length > 0) {

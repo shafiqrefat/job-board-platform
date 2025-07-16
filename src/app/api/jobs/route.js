@@ -6,7 +6,7 @@ export async function GET(req) {
   const location = searchParams.get('location');
   const search = searchParams.get('search');
 
-  const res = await fetch('http://localhost:4000/jobs');
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/jobs`);
   let jobs = await res.json();
 
   // Filter by job type
