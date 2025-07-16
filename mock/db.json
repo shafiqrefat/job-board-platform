@@ -261,7 +261,14 @@
       "id": "user-1",
       "email": "admin@example.com",
       "password": "admin123",
-      "role": "admin"
+      "role": "admin",
+      "name": "Admin User"
+    },
+    {
+      "id": "user-939",
+      "name": "Shafiqur Rahman",
+      "email": "hello.shafiq@test.com",
+      "password": "hello12345"
     }
   ],
   "categories": [

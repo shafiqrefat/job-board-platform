@@ -1,9 +1,11 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '../contex/authContex';
 
 export default function PostJobPage() {
-  const router = useRouter();
+    const { user } = useAuth();
+    const router = useRouter();
 
   const [formData, setFormData] = useState({
     title: '',
@@ -54,6 +56,13 @@ export default function PostJobPage() {
     }
   };
 
+    useEffect(() => {
+    if (!user) {
+      router.push('/login');
+    }
+    }, [user]);
+
+  if (!user) return null;
   return (
     <main className="max-w-2xl mx-auto py-8 px-4">
       <h1 className="text-2xl font-bold mb-6">Post a New Job</h1>
