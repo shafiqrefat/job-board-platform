@@ -1,4 +1,3 @@
-import { NextRequest } from 'next/server';
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
 

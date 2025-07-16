@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/header";
 import Navbar from "./components/navbar/navbar";
 import { AuthProvider } from "./contex/authContex";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
       >
         <AuthProvider>
           <Navbar/>
-          {children}
+           <Suspense fallback={<p className="text-center py-10">Loading page...</p>}>
+              {children}
+          </Suspense>
         </AuthProvider>
       </body>
     </html>
