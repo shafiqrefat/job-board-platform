@@ -254,6 +254,20 @@
         "test 2, test 3"
       ],
       "companyInfo": "Test Technology 2 is hiring via Post Job Form."
+    },
+    {
+      "id": "job-635",
+      "title": "GoLang Engineer",
+      "description": "Have to maintain the project and lead the junior",
+      "location": "Finland",
+      "category": "Tech",
+      "type": "Contract",
+      "company": "Go Tech",
+      "requirements": [
+        "go",
+        "reacts"
+      ],
+      "companyInfo": "Go Tech is hiring via Post Job Form."
     }
   ],
   "users": [
