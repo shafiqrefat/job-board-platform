@@ -65,7 +65,7 @@ export default function SignupPage() {
 
   return (
     <>
-        <form onSubmit={handleSignup} className="max-w-md mx-auto py-8 space-y-4">
+        <form onSubmit={handleSignup} className="max-w-md mx-auto py-8 px-4 space-y-4">
             <h2 className="text-2xl font-bold">Sign Up</h2>
             {error && <p className="text-red-500">{error}</p>}
 
